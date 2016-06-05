@@ -10,13 +10,16 @@
 using namespace std;
 
 int main() {
+    // Values entered by the user
     int lab1, lab2, lab3, lab4, lab5, lab6, lab7;
     int exam1, exam2, exam3, exam4, exam5, exam6, exam7;
     int attendance, capstone;
-    double labAverage, examAverage, finalGrade;
-    
     string name;
     
+    // Variables that are calculated
+    double labAverage, examAverage, finalGrade;
+    
+    // Prompt user for input and store values in variables 
     cout << "What is your name? ";
     getline (cin, name);
     
@@ -66,6 +69,12 @@ int main() {
     
     cout << endl;
     
+    // Perform calculations
+    labAverage = (lab1 + lab2 + lab3 + lab4 + lab5 + lab6 + lab7) / 7;
+    examAverage = (exam1 + exam2 + exam3 + exam4 + exam5 + exam6 + exam7) / 7;
+    finalGrade = (labAverage * .4) + (examAverage* .35) + (attendance * .05) + (capstone * .2);
+    
+    // Output to the user
     cout << endl;
     cout << "Grades for " << name << ":" << endl;
     cout << "Lab 1 score: " << lab1 << endl;
@@ -86,17 +95,13 @@ int main() {
     cout << "Exam 6 score: " << exam6 << endl;
     cout << "Exam 7 score: " << exam7 << endl << endl;
     
-    labAverage = (lab1 + lab2 + lab3 + lab4 + lab5 + lab6 + lab7) / 7;
-    examAverage = (exam1 + exam2 + exam3 + exam4 + exam5 + exam6 + exam7) / 7;
-    
     cout << "Lab Average: " << labAverage << endl;
     cout << "Exam Average: " << examAverage << endl; 
     cout << "Participation / Attendance: " << attendance << endl;
     cout << "Capstone Project: " << capstone << endl << endl;     
     
-    finalGrade = (labAverage * .4) + (examAverage* .35) + (attendance * .05) + (capstone * .2);
-    
     cout << "Final Numeric Grade: " << finalGrade << endl;
     
+    // End the program
     return 0;
 }
