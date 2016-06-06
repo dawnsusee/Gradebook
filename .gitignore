@@ -1,0 +1,8 @@
+build/
+build/Debug/
+build/Debug/Cygwin-Windows/
+build/Debug/MinGW-Windows/
+dist/
+dist/Debug/
+dist/Debug/Cygwin-Windows/
+dist/Debug/MinGW-Windows/
